@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Carter — Backend Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="imprint2.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ CUSTOM CURSOR ═══════════════ -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>AC<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link">Certs</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me <i class="fa-solid fa-arrow-right"></i></a>
+    <button class="nav-toggle" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-name">Alex <span class="name-accent">Carter</span></h1>
+        <div class="hero-role">
+          <span class="role-prefix">$ &nbsp;</span>
+          <span id="typed-text"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-desc">
+          Architecting robust, scalable backend systems with a passion for clean code,
+          distributed architectures, and turning complex problems into elegant APIs.
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Years Exp.</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="32">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="12">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-terminal"></i></a>
+          <a href="#" class="btn btn-ghost">Download CV <i class="fa-solid fa-download"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo-frame">
+          <div class="photo-ring ring-1"></div>
+          <div class="photo-ring ring-2"></div>
+          <div class="photo-ring ring-3"></div>
+          <div class="photo-wrapper">
+            <img src="https://i.pravatar.cc/400?img=11" alt="Alex Carter" class="hero-photo" />
+            <div class="photo-overlay"></div>
+          </div>
+          <div class="photo-badge badge-top">
+            <i class="fa-brands fa-python"></i> Python Expert
+          </div>
+          <div class="photo-badge badge-bottom">
+            <i class="fa-solid fa-server"></i> Backend Dev
+          </div>
+        </div>
+        <!-- Floating code card -->
+        <div class="code-card">
+          <div class="code-dots">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+          </div>
+          <pre class="code-snippet"><span class="c-kw">class</span> <span class="c-fn">Engineer</span>:
+  <span class="c-kw">def</span> <span class="c-fn">__init__</span>(self):
+    self.name = <span class="c-str">"Alex Carter"</span>
+    self.role = <span class="c-str">"Backend Eng."</span>
+    self.stack = [
+      <span class="c-str">"Python"</span>, <span class="c-str">"Go"</span>,
+      <span class="c-str">"PostgreSQL"</span>, <span class="c-str">"Redis"</span>
+    ]</pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>scroll down</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">01 // About Me</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+          <p>
+            I'm a <strong>Computer Engineering graduate</strong> and backend specialist with over
+            <strong>5 years of experience</strong> building high-performance systems that power
+            millions of users. My core expertise lies in designing microservices, RESTful & GraphQL APIs,
+            and event-driven architectures using <strong>Python, Go, and Node.js</strong>.
+          </p>
+          <p>
+            I thrive in fast-paced environments where I can tackle hard infrastructure problems —
+            from optimizing database queries to designing fault-tolerant distributed systems on
+            <strong>AWS, GCP, and Kubernetes</strong>. I believe great software is both reliable and readable.
+          </p>
+          <div class="about-tags">
+            <span class="tag"><i class="fa-solid fa-graduation-cap"></i> BSc. Computer Engineering</span>
+            <span class="tag"><i class="fa-solid fa-location-dot"></i> Amman, Jordan</span>
+            <span class="tag"><i class="fa-solid fa-briefcase"></i> Open to Remote</span>
+            <span class="tag"><i class="fa-solid fa-language"></i> Arabic / English</span>
+          </div>
+        </div>
+        <div class="about-cards" data-aos="fade-left" data-aos-delay="200">
+          <div class="about-card">
+            <i class="fa-solid fa-microchip about-card-icon"></i>
+            <h3>System Design</h3>
+            <p>Scalable architecture, load balancing, caching strategies, and high-availability systems.</p>
+          </div>
+          <div class="about-card">
+            <i class="fa-solid fa-database about-card-icon"></i>
+            <h3>Data Engineering</h3>
+            <p>Complex SQL/NoSQL optimization, migrations, replication, and real-time pipelines.</p>
+          </div>
+          <div class="about-card">
+            <i class="fa-brands fa-docker about-card-icon"></i>
+            <h3>DevOps & Cloud</h3>
+            <p>CI/CD pipelines, containerization, Kubernetes orchestration and cloud-native deployments.</p>
+          </div>
+          <div class="about-card">
+            <i class="fa-solid fa-shield-halved about-card-icon"></i>
+            <h3>API Security</h3>
+            <p>OAuth2, JWT, rate limiting, input validation, and OWASP compliance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SKILLS ═══════════════ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">02 // Skills</span>
+        <h2 class="section-title">Tech Stack</h2>
+      </div>
+
+      <div class="skills-tabs" data-aos="fade-up" data-aos-delay="100">
+        <button class="skill-tab active" data-tab="languages">Languages</button>
+        <button class="skill-tab" data-tab="backend">Backend</button>
+        <button class="skill-tab" data-tab="databases">Databases</button>
+        <button class="skill-tab" data-tab="devops">DevOps & Cloud</button>
+      </div>
+
+      <div class="skills-panel active" id="tab-languages" data-aos="fade-up" data-aos-delay="150">
+        <div class="skill-bars">
+          <div class="skill-bar"><div class="sb-header"><span>Python</span><span>95%</span></div><div class="sb-track"><div class="sb-fill" data-w="95"></div></div></div>
+          <div class="skill-bar"><div class="sb-header"><span>Go (Golang)</span><span>80%</span></div><div class="sb-track"><div class="sb-fill" data-w="80"></div></div></div>
+          <div class="skill-bar"><div class="sb-header"><span>TypeScript / Node.js</span><span>85%</span></div><div class="sb-track"><div class="sb-fill" data-w="85"></div></div></div>
+          <div class="skill-bar"><div class="sb-header"><span>SQL (PostgreSQL, MySQL)</span><span>90%</span></div><div class="sb-track"><div class="sb-fill" data-w="90"></div></div></div>
+          <div class="skill-bar"><div class="sb-header"><span>Bash / Shell Scripting</span><span>75%</span></div><div class="sb-track"><div class="sb-fill" data-w="75"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-backend" data-aos="fade-up">
+        <div class="tech-grid">
+          <div class="tech-chip"><i class="fa-brands fa-python"></i> FastAPI</div>
+          <div class="tech-chip"><i class="fa-brands fa-python"></i> Django REST</div>
+          <div class="tech-chip"><i class="fa-solid fa-bolt"></i> Flask</div>
+          <div class="tech-chip"><i class="fa-solid fa-server"></i> Gin (Go)</div>
+          <div class="tech-chip"><i class="fa-brands fa-node-js"></i> Express.js</div>
+          <div class="tech-chip"><i class="fa-solid fa-diagram-project"></i> GraphQL</div>
+          <div class="tech-chip"><i class="fa-solid fa-envelope"></i> RabbitMQ</div>
+          <div class="tech-chip"><i class="fa-solid fa-stream"></i> Apache Kafka</div>
+          <div class="tech-chip"><i class="fa-solid fa-lock"></i> OAuth2 / JWT</div>
+          <div class="tech-chip"><i class="fa-solid fa-arrows-spin"></i> REST APIs</div>
+          <div class="tech-chip"><i class="fa-solid fa-plug"></i> WebSockets</div>
+          <div class="tech-chip"><i class="fa-solid fa-code-branch"></i> gRPC</div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-databases" data-aos="fade-up">
+        <div class="tech-grid">
+          <div class="tech-chip"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+          <div class="tech-chip"><i class="fa-solid fa-database"></i> MySQL</div>
+          <div class="tech-chip"><i class="fa-solid fa-leaf"></i> MongoDB</div>
+          <div class="tech-chip"><i class="fa-solid fa-memory"></i> Redis</div>
+          <div class="tech-chip"><i class="fa-solid fa-magnifying-glass"></i> Elasticsearch</div>
+          <div class="tech-chip"><i class="fa-solid fa-fire"></i> Firebase</div>
+          <div class="tech-chip"><i class="fa-solid fa-table-columns"></i> SQLAlchemy</div>
+          <div class="tech-chip"><i class="fa-solid fa-sitemap"></i> Prisma ORM</div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-devops" data-aos="fade-up">
+        <div class="tech-grid">
+          <div class="tech-chip"><i class="fa-brands fa-docker"></i> Docker</div>
+          <div class="tech-chip"><i class="fa-solid fa-dharmachakra"></i> Kubernetes</div>
+          <div class="tech-chip"><i class="fa-brands fa-aws"></i> AWS</div>
+          <div class="tech-chip"><i class="fa-brands fa-google"></i> GCP</div>
+          <div class="tech-chip"><i class="fa-brands fa-git-alt"></i> Git / GitHub</div>
+          <div class="tech-chip"><i class="fa-solid fa-infinity"></i> CI/CD (GitHub Actions)</div>
+          <div class="tech-chip"><i class="fa-solid fa-chart-line"></i> Prometheus / Grafana</div>
+          <div class="tech-chip"><i class="fa-brands fa-linux"></i> Linux Admin</div>
+          <div class="tech-chip"><i class="fa-solid fa-layer-group"></i> Terraform</div>
+          <div class="tech-chip"><i class="fa-solid fa-gear"></i> Ansible</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EXPERIENCE ═══════════════ -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">03 // Experience</span>
+        <h2 class="section-title">Work History</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3 class="tc-title">Senior Backend Engineer</h3>
+                <span class="tc-company"><i class="fa-solid fa-building"></i> TechNova Solutions</span>
+              </div>
+              <span class="tc-date">Jan 2023 – Present</span>
+            </div>
+            <ul class="tc-list">
+              <li>Led migration of monolithic application to microservices, reducing latency by <strong>40%</strong>.</li>
+              <li>Designed event-driven architecture using Kafka processing <strong>500K+ messages/day</strong>.</li>
+              <li>Built internal developer platform on Kubernetes serving <strong>15 engineering teams</strong>.</li>
+              <li>Mentored 4 junior engineers and established backend coding standards & code review culture.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Python</span><span>FastAPI</span><span>Kafka</span><span>Kubernetes</span><span>AWS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3 class="tc-title">Backend Developer</h3>
+                <span class="tc-company"><i class="fa-solid fa-building"></i> DataStream Inc.</span>
+              </div>
+              <span class="tc-date">Mar 2021 – Dec 2022</span>
+            </div>
+            <ul class="tc-list">
+              <li>Built RESTful APIs serving <strong>2M+ daily active users</strong> with 99.9% uptime.</li>
+              <li>Optimized critical PostgreSQL queries, improving response time by <strong>60%</strong>.</li>
+              <li>Implemented real-time notification system using WebSockets and Redis pub/sub.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Django REST</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="tc-header">
+              <div>
+                <h3 class="tc-title">Junior Backend Developer</h3>
+                <span class="tc-company"><i class="fa-solid fa-building"></i> CodeCraft Agency</span>
+              </div>
+              <span class="tc-date">Jul 2019 – Feb 2021</span>
+            </div>
+            <ul class="tc-list">
+              <li>Developed and maintained backend services for 8 client projects across e-commerce and fintech.</li>
+              <li>Integrated third-party payment gateways (Stripe, PayPal) with robust error handling.</li>
+              <li>Wrote comprehensive unit and integration tests achieving <strong>90%+ code coverage</strong>.</li>
+            </ul>
+            <div class="tc-tags">
+              <span>Node.js</span><span>Express</span><span>MySQL</span><span>JWT</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">04 // Projects</span>
+        <h2 class="section-title">Featured Work</h2>
+      </div>
+
+      <div class="projects-filter" data-aos="fade-up" data-aos-delay="100">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="api">API</button>
+        <button class="filter-btn" data-filter="microservices">Microservices</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+        <button class="filter-btn" data-filter="devops">DevOps</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card" data-category="api microservices" data-aos="fade-up" data-aos-delay="100">
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="pc-links">
+              <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">E-Commerce Platform API</h3>
+          <p class="pc-desc">Scalable RESTful API powering an e-commerce platform with real-time inventory tracking, Stripe payment integration, and order management microservices.</p>
+          <div class="pc-tech">
+            <span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span><span>AWS</span>
+          </div>
+          <div class="pc-stats">
+            <span><i class="fa-solid fa-star"></i> 124</span>
+            <span><i class="fa-solid fa-code-fork"></i> 38</span>
+          </div>
+        </div>
+
+        <div class="project-card featured" data-category="microservices data" data-aos="fade-up" data-aos-delay="150">
+          <div class="pc-featured-badge">Featured</div>
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fa-solid fa-chart-network"></i></div>
+            <div class="pc-links">
+              <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">Real-Time Analytics Pipeline</h3>
+          <p class="pc-desc">Event-driven data pipeline processing 500K+ events/day using Kafka streams, Python consumers, and a live Grafana dashboard for business metrics visualization.</p>
+          <div class="pc-tech">
+            <span>Python</span><span>Kafka</span><span>Elasticsearch</span><span>Grafana</span><span>Kubernetes</span>
+          </div>
+          <div class="pc-stats">
+            <span><i class="fa-solid fa-star"></i> 312</span>
+            <span><i class="fa-solid fa-code-fork"></i> 87</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="api" data-aos="fade-up" data-aos-delay="200">
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="pc-links">
+              <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">Auth Microservice</h3>
+          <p class="pc-desc">Production-ready authentication and authorization service featuring OAuth2, JWT refresh tokens, 2FA, and role-based access control (RBAC).</p>
+          <div class="pc-tech">
+            <span>Go</span><span>PostgreSQL</span><span>Redis</span><span>gRPC</span>
+          </div>
+          <div class="pc-stats">
+            <span><i class="fa-solid fa-star"></i> 89</span>
+            <span><i class="fa-solid fa-code-fork"></i> 23</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="devops" data-aos="fade-up" data-aos-delay="100">
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fa-solid fa-infinity"></i></div>
+            <div class="pc-links">
+              <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Docs"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">K8s Deployment Toolkit</h3>
+          <p class="pc-desc">Open-source CLI tool automating zero-downtime Kubernetes deployments with rollback support, health checks, and Slack notifications.</p>
+          <div class="pc-tech">
+            <span>Go</span><span>Kubernetes</span><span>Helm</span><span>Terraform</span>
+          </div>
+          <div class="pc-stats">
+            <span><i class="fa-solid fa-star"></i> 210</span>
+            <span><i class="fa-solid fa-code-fork"></i> 54</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="data" data-aos="fade-up" data-aos-delay="150">
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="pc-links">
+              <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">ML Model Serving API</h3>
+          <p class="pc-desc">High-performance prediction API serving multiple ML models with auto-scaling, A/B testing, model versioning, and detailed performance monitoring.</p>
+          <div class="pc-tech">
+            <span>FastAPI</span><span>PyTorch</span><span>Redis</span><span>Celery</span><span>AWS</span>
+          </div>
+          <div class="pc-stats">
+            <span><i class="fa-solid fa-star"></i> 175</span>
+            <span><i class="fa-solid fa-code-fork"></i> 41</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="microservices api" data-aos="fade-up" data-aos-delay="200">
+          <div class="pc-top">
+            <div class="pc-icon"><i class="fa-solid fa-comment-dots"></i></div>
+            <div class="pc-links">
+              <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <h3 class="pc-title">Realtime Chat Backend</h3>
+          <p class="pc-desc">Scalable chat server supporting 10K concurrent users with WebSocket rooms, message persistence, file uploads, and end-to-end encryption.</p>
+          <div class="pc-tech">
+            <span>Node.js</span><span>Socket.io</span><span>MongoDB</span><span>Redis</span>
+          </div>
+          <div class="pc-stats">
+            <span><i class="fa-solid fa-star"></i> 98</span>
+            <span><i class="fa-solid fa-code-fork"></i> 29</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CERTIFICATIONS ═══════════════ -->
+  <section class="certifications section" id="certifications">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">05 // Certifications</span>
+        <h2 class="section-title">Credentials</h2>
+      </div>
+      <div class="certs-grid">
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="cert-icon cert-aws"><i class="fa-brands fa-aws"></i></div>
+          <div class="cert-body">
+            <h3>AWS Solutions Architect</h3>
+            <span class="cert-issuer">Amazon Web Services</span>
+            <span class="cert-date">2024 · Valid till 2027</span>
+          </div>
+          <a href="#" class="cert-badge">Verified <i class="fa-solid fa-check-circle"></i></a>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="cert-icon cert-k8s"><i class="fa-solid fa-dharmachakra"></i></div>
+          <div class="cert-body">
+            <h3>Certified Kubernetes Administrator</h3>
+            <span class="cert-issuer">Cloud Native Foundation</span>
+            <span class="cert-date">2023 · Valid till 2026</span>
+          </div>
+          <a href="#" class="cert-badge">Verified <i class="fa-solid fa-check-circle"></i></a>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="cert-icon cert-gcp"><i class="fa-brands fa-google"></i></div>
+          <div class="cert-body">
+            <h3>GCP Professional Cloud Developer</h3>
+            <span class="cert-issuer">Google Cloud</span>
+            <span class="cert-date">2023 · Valid till 2025</span>
+          </div>
+          <a href="#" class="cert-badge">Verified <i class="fa-solid fa-check-circle"></i></a>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="cert-icon cert-python"><i class="fa-brands fa-python"></i></div>
+          <div class="cert-body">
+            <h3>Python Professional Developer</h3>
+            <span class="cert-issuer">PCEP / Python Institute</span>
+            <span class="cert-date">2022 · No Expiry</span>
+          </div>
+          <a href="#" class="cert-badge">Verified <i class="fa-solid fa-check-circle"></i></a>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="cert-icon cert-mongo"><i class="fa-solid fa-leaf"></i></div>
+          <div class="cert-body">
+            <h3>MongoDB Certified Developer</h3>
+            <span class="cert-issuer">MongoDB University</span>
+            <span class="cert-date">2022 · No Expiry</span>
+          </div>
+          <a href="#" class="cert-badge">Verified <i class="fa-solid fa-check-circle"></i></a>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="cert-icon cert-docker"><i class="fa-brands fa-docker"></i></div>
+          <div class="cert-body">
+            <h3>Docker Certified Associate</h3>
+            <span class="cert-issuer">Docker Inc.</span>
+            <span class="cert-date">2021 · Valid till 2025</span>
+          </div>
+          <a href="#" class="cert-badge">Verified <i class="fa-solid fa-check-circle"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">06 // Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+      </div>
+      <p class="contact-sub" data-aos="fade-up" data-aos-delay="100">
+        Whether you have a project in mind, an opportunity to share, or just want to talk tech —
+        my inbox is always open. Let's build something great together.
+      </p>
+
+      <div class="contact-grid" data-aos="fade-up" data-aos-delay="150">
+
+        <div class="contact-links">
+          <a href="mailto:alex@example.com" class="contact-card">
+            <div class="cc-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="cc-info">
+              <span class="cc-label">Email</span>
+              <span class="cc-value">alex@example.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-right cc-arrow"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="contact-card">
+            <div class="cc-icon linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="cc-info">
+              <span class="cc-label">LinkedIn</span>
+              <span class="cc-value">linkedin.com/in/alexcarter</span>
+            </div>
+            <i class="fa-solid fa-arrow-right cc-arrow"></i>
+          </a>
+          <a href="https://github.com" target="_blank" class="contact-card">
+            <div class="cc-icon github"><i class="fa-brands fa-github"></i></div>
+            <div class="cc-info">
+              <span class="cc-label">GitHub</span>
+              <span class="cc-value">github.com/alexcarter</span>
+            </div>
+            <i class="fa-solid fa-arrow-right cc-arrow"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="contact-card">
+            <div class="cc-icon twitter"><i class="fa-brands fa-x-twitter"></i></div>
+            <div class="cc-info">
+              <span class="cc-label">Twitter / X</span>
+              <span class="cc-value">@alexcarter_dev</span>
+            </div>
+            <i class="fa-solid fa-arrow-right cc-arrow"></i>
+          </a>
+          <a href="https://dev.to" target="_blank" class="contact-card">
+            <div class="cc-icon devto"><i class="fa-brands fa-dev"></i></div>
+            <div class="cc-info">
+              <span class="cc-label">Dev.to Blog</span>
+              <span class="cc-value">dev.to/alexcarter</span>
+            </div>
+            <i class="fa-solid fa-arrow-right cc-arrow"></i>
+          </a>
+          <a href="https://stackoverflow.com" target="_blank" class="contact-card">
+            <div class="cc-icon so"><i class="fa-brands fa-stack-overflow"></i></div>
+            <div class="cc-info">
+              <span class="cc-label">Stack Overflow</span>
+              <span class="cc-value">stackoverflow.com/u/alexcarter</span>
+            </div>
+            <i class="fa-solid fa-arrow-right cc-arrow"></i>
+          </a>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@company.com" required />
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" placeholder="Project collaboration" />
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell me about your project or opportunity..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            Send Message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>AC<span class="logo-bracket">/&gt;</span>
+          <p>Building the web from the ground up.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-dev"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Alex Carter. Built with passion & caffeine. ☕</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ SCRIPTS ═══════════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="imprint2.js"></script>
+</body>
+</html>
